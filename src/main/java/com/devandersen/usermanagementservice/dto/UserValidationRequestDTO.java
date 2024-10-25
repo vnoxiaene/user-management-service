@@ -5,6 +5,6 @@ import lombok.Value;
 @Value
 public class UserValidationRequestDTO {
 
-    String userName;
+    String username;
     String password;
 }

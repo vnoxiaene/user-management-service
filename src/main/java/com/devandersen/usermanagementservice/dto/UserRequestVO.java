@@ -7,7 +7,7 @@ import lombok.Value;
 @Builder(toBuilder = true)
 public class UserRequestVO {
 
-    String userName;
+    String username;
     String password;
     String email;
 

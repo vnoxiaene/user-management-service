@@ -18,7 +18,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     public UserValidationResponseDTO validateUser(UserValidationRequestDTO userValidationRequestDTO){
-        Optional<User> userOptional = userRepository.findByUserName(userValidationRequestDTO.getUserName());
+        Optional<User> userOptional = userRepository.findByUsername(userValidationRequestDTO.getUsername());
         if(userOptional.isPresent()){
             User user = userOptional.get();
             return new UserValidationResponseDTO(user.getPassword().equals(userValidationRequestDTO.getPassword()));
